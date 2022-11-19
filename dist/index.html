@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Pulse</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link data-react-helmet="true" rel="icon" type="image/png" href="img/projectpulselogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 4rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            background: white;
+            transition: 0.7s;
+            z-index: 999;
+        }
+        .header .rightside .btn {
+            display: none;
+        }
+        @media (max-width: 768px){
+            .header .rightside .btn{
+                display: block;
+                font-size: 25px;
+            }
+
+            .header .menu{
+                position: fixed;
+                background: #fff;
+                flex-direction: column;
+                min-width: 300px;
+                height: 100vh;
+                top: 0;
+                right: -100%;
+                padding: 80px 50px;
+                transition: 0.5s;
+                transition-property: right;
+                
+            }
+
+            /* .header .leftside {
+                padding-left: 20px;
+            }
+
+            .header .rightside {
+                padding-right: 20px;
+            } */
+
+            .header .menu.active {
+                right: 0;
+            }
+
+            .header .menu .close-btn {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 25px;
+            }
+
+            .header .menu a {
+                display: block;
+                font-size: 20px;
+                margin: 20px;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body class="">
+
+    <div class="relative">
+        <img src="img/Rectangle 6.png" class="absolute">
+        <img src="img/Rectangle 8.png" class="absolute right-0.5">
+        <img src="img/Rectangle 9.png" class="absolute right-0">
+    </div>
+
+
+    <!-- Header Start -->
+    <header class="relative flex items-center h-16 font-circular" id="myHeader">
+        <div class="container mx-auto">
+            <div class="px-40">
+                <div class="flex justify-between items-center">
+                    <div class="leftside">
+                        <a href="#">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                        
+                    </div>
+                    <div class="rightside flex gap-12 text-sm font-normal text-slate-800">
+                        <div class="">
+                            <a href="#" class="hover:text-blue-500 tracking-wide">Home</a>
+                        </div>
+                        <div class="">
+                            <a href="#pricingplans" class="hover:text-blue-500 tracking-wide">Pricing Plans</a>
+                        </div>
+                        <div class="">
+                            <a href="#" class="text-white bg-blue-500 p-2.5 px-5 rounded-lg hover:bg-blue-600 duration-300 tracking-wide">Get started now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Start -->
+
+    <div class="font-circular">
+        <!-- Section 1 Start -->
+        <div class="section1 container mx-auto w-full h-auto flex justify-between px-40 pt-20 pb-24 items-center relative">
+            
+            <div class="w-2/4">
+                <div class="" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="uppercase text-sm text-blue-500 font-medium">
+                        <span>work smarter, not harder</span>
+                    </div>
+                    <div class="capitalize text-5xl font-semibold mt-8">
+                        <p>automate your team's</p>
+                        <p>status updates &</p>
+                        <p>optimize productivity</p>
+                    </div>
+                    <div class="font-light text-sm leading-6 mt-8 text-slate-500">
+                        <p>Project Pulse automatically collects and complies key team updates,</p> 
+                        <p>providing you with a bird's eye view of the project status.</p> 
+                        <p>Reserve your team's launch day copy today.</p>
+                    </div>
+                    <div class="text-center mt-8">
+                        <div class="bg-blue-500 hover:bg-blue-600 text-white text-sm w-44 p-3 rounded-md cursor-pointer duration-300 font-circular">
+                            <span>Try for Free</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="w-2/4">
+                <div class="h-full relative -right-24" data-aos="flip-right" data-aos-duration="1500">
+                    <img src="img/pic1.png" class="">
+                </div>
+            </div>
+        </div>
+        <!-- Section 1 End -->
+
+        <!-- Section 2 Start -->
+
+        <div class="section3 container mx-auto" data-aos="fade-up" data-aos-duration="2000">
+            <div class="flex justify-center gap-28 pt-24">
+                <div class="w-1/6 px-6">
+                    <div class="flex justify-center">
+                        <img src="img/clock.png" class="w-8 h-8">
+                    </div>
+                    <div class="font-medium text-center mt-6">
+                        <span>Stay Ahead of Delays</span>
+                    </div>
+                    <div class="text-center font-light text-sm mt-6 text-slate-500">
+                        <span>Quickly detect timeline conflicts and roadblocks before they become delays. Impress your superiors with consistently high-quality and timely projects.</span>
+                    </div>
+                </div>
+                <div class="w-1/6 px-6">
+                    <div class="flex justify-center">
+                        <img src="img/trending-up.png" class="w-8 h-8">
+                    </div>
+                    <div class="font-semibold text-center mt-6">
+                        <span>Increase Productivity</span>
+                    </div>
+                    <div class="text-center font-light text-sm mt-6 text-slate-500">
+                        <span>Motivate your team members to make progress with daily accountability, positive feedback, and a platform where they can voice their needs and concerns.</span>
+                    </div>
+                </div>
+                <div class="w-1/6 px-6">
+                    <div class="flex justify-center">
+                        <img src="img/users.png" class="w-8 h-8">
+                    </div>
+                    <div class="font-semibold text-center mt-6">
+                        <span>Improve Team Dynamic</span>
+                    </div>
+                    <div class="text-center font-light text-sm mt-6 text-slate-500">
+                        <span>Improve communication with your team and identify weaknesses in your team dynamic to eliminate frustration and improve overall efficiency.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-28 mt-20 pb-24">
+                <div class="w-1/6 px-6">
+                    <div class="flex justify-center">
+                        <img src="img/cpu.png" class="w-8 h-8">
+                    </div>
+                    <div class="font-semibold text-center mt-6">
+                        <span>Completely Automated</span>
+                    </div>
+                    <div class="text-center font-light text-sm mt-6 text-slate-500">
+                        <!-- <span>Set up your account once and you'll never have to spend time chasing down updates again. Each comprehensive report will be sent right to your inbox.</span> -->
+                        <p>Set up your account once and you'll never have to spend time chasing down updates again.</p>
+                        <p>Each comprehensive report will be sent right to your inbox.</p>
+                    </div>
+                </div>
+                <div class="w-1/6 px-6">
+                    <div class="flex justify-center">
+                        <img src="img/refresh-ccw.png" class="w-8 h-8">
+                    </div>
+                    <div class="font-semibold text-center mt-6">
+                        <span>Customize Updates</span>
+                    </div>
+                    <div class="text-center font-light text-sm mt-6 text-slate-500">
+                        <span>Customize the questions you ask, who you ask, and how often you ask, to the needs of your team and project. Receive an insightful report for each update.</span>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- Section 2 End -->
+        <div class="relative">
+            <img src="img/Rectangle 10.png" class="absolute right-0 -top-80 mix-blend-multiply">
+        </div>
+
+        <!-- Section 3 Start -->
+
+        <div class="section3 bg-gradient-to-r from-blue-700 via-blue-900 to-gray-900">
+            <div class="pt-16 pb-8">
+                <div class="uppercase text-center text-xs font-medium text-blue-400">
+                    <span>project pulse</span>
+                </div>
+                <div class="capitalize text-center text-5xl font-medium text-white mt-4">
+                    <span>bring your team together</span>
+                </div>
+                <div class="text-center text-blue-300 font-light mt-4">
+                    Automated Status Updates and Improved Project Results
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="bg-white w-1/3 rounded-md p-1 relative top-6 border border-gray-200">
+                    <div class="flex items-center">
+                        <div class="w-full pb-1">
+                            <input type="text" class="w-full text-sm px-2 focus:outline-none" placeholder="Enter your email">
+                        </div>
+                        <div class="bg-blue-500 px-10 py-3 text-white text-xs font-medium rounded-md cursor-pointer hover:bg-blue-600 duration-300">
+                            <span>Subscribe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 3 End -->
+
+        <div class="relative">
+            <img src="img/Rectangle 6.png" class="absolute">
+            <img src="img/Rectangle 11.png" class="absolute right-0 top-12">
+        </div>
+
+        
+
+        <!-- Section 4 Start -->
+
+        <div class="section4 pt-24 pb-24">
+            <div class="container mx-auto relative">
+                <div class="">
+                    <div class="uppercase text-center text-xs font-medium text-blue-500">
+                        <span>project pulse</span>
+                    </div>
+                    <div class="text-center font-medium text-3xl mt-4">
+                        <span>Improve Your Leadership and Management Skills</span>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8 gap-8">
+                    <div class="w-80 border border-blue-100 rounded-lg py-8 px-10 bg-white" data-aos="zoom-out" data-aos-duration="1000">
+                        <div class="flex justify-center pt-2">
+                            <img src="img/file-text.png" class="h-8 w-8">
+                        </div>
+                        <div class="font-semibold text-center mt-6">
+                            <span>Setup is Fast and Painless</span>
+                        </div>
+                        <div class="text-center font-light text-sm mt-6 text-slate-500">
+                            <span>Choose how often you need updates on team member progress for each project. Then, customize your questions to get the information your need and address any team member concerns. Finally, add team members to each project and you're ready to start effortlessly collecting updates. </span>
+                        </div>
+                    </div>
+                    <div class="w-80 border border-blue-100 rounded-lg py-8 px-10 bg-white" data-aos="zoom-out" data-aos-duration="1000">
+                        <div class="flex justify-center pt-2">
+                            <img src="img/trello.png" class="h-8 w-8">
+                        </div>
+                        <div class="font-semibold text-center mt-6">
+                            <span>All the Info in One Place</span>
+                        </div>
+                        <div class="text-center font-light text-sm mt-6 text-slate-500">
+                            <span>
+                                Once your team members respond to your questions, we'll gather the answers and prepare them in a nicely-formatted, easy-to-read report. Each report will give you a snapshot of each team member's progress, potential productivity issues, and the overall status of the project.
+                            </span>
+                            
+                        </div>
+                    </div>
+                    <div class="w-80 border border-blue-100 rounded-lg py-8 px-10 bg-white" data-aos="zoom-out" data-aos-duration="1000">
+                        <div class="flex justify-center pt-2">
+                            <img src="img/heart.png" class="h-8 w-8">
+                        </div>
+                        <div class="font-semibold text-center mt-6">
+                            <span>Your Team Will Love It</span>
+                        </div>
+                        <div class="text-center font-light text-sm mt-6 text-slate-500">
+                            <span>Team members can use a simple, visual editing tool to make project managers aware of needs, concerns, and roadblocks that are impeding their progress. It also gives you a chance to provide positive feedback and encouragement, as well as any necessary intervention and assistance.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 End -->
+
+        <!-- Section 5 Start -->
+
+        <div class="section5 container mx-auto pt-24 pb-24 relative px-8">
+            <div class="flex justify-center items-center gap-12">
+                <div class="w-2/5" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="uppercase text-xs font-medium text-blue-500">
+                        <span>project pulse</span>
+                    </div>
+                    <div class="text-6xl font-semibold mt-8">
+                        <span>Integrates with Your Existing Platforms</span>
+                    </div>
+                    <div class="font-light text-sm leading-6 mt-8 text-slate-500">
+                        <span>Use Project Pulse with your existing marketing and</span> <br>
+                        <span>productivity platforms like Google Drive, Mailchimp,</span> <br>
+                        <span>Twitter, Dropbox, and more.</span>
+                    </div>
+                </div>
+                <div class="w-2/5" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="img/IntegratesApp.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5 End -->
+
+       <!-- Section Feature Start -->
+
+        <div class="feature py-20 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="uppercase text-xs font-medium text-blue-500 text-center">
+                    <p>project pulse</p>
+                </div>
+                <div class="font-medium text-3xl text-center pt-4">
+                    <p>Features</p>
+                </div>
+                <!-- Feature 1 -->
+                <div class="flex gap-28 p-16 px-24 mx-40 bg-white rounded-xl mt-20 items-center" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="img/feature1.png" class="">
+                    <div class="">
+                        <img src="img/pplogo.png" class="py-2">
+                        <p class="text-xl font-medium subpixel-antialiased">Gathering data</p>
+                        <div class="py-2 pl-6">
+                            <ul class="list-disc font-light text-slate-500 leading-6 text-sm">
+                                <li>
+                                    <p>Automatically Gather Team Member Status Updates</p>         
+                                </li>
+                                <li>
+                                    <p>Connect to your data sources and pull in relevant information.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex gap-28 p-16 px-24 mx-40 rounded-xl items-center" data-aos="fade-left" data-aos-duration="1000">
+                    
+                    <div class="">
+                        <img src="img/pplogo.png" class="py-2">
+                        <p class="text-xl font-medium subpixel-antialiased">Synthesizing</p>
+                        <div class="py-2 pl-6">
+                            <ul class="list-disc font-light text-slate-500 leading-6 text-sm">
+                                <li>
+                                    <p>We automatically create a report and easily allow you to add data points and new content blocks</p>         
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="img/feature2.png" class="">
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex gap-28 p-16 px-24 mx-40 bg-white rounded-xl items-center" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="img/feature3.png" class="">
+                    <div class="">
+                        <img src="img/pplogo.png" class="py-2">
+                        <p class="text-xl font-medium subpixel-antialiased">Double checking</p>
+                        <div class="py-2 pl-6">
+                            <ul class="list-disc font-light text-slate-500 leading-6 text-sm">
+                                <li>
+                                    <p>Send report for review</p>         
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="flex gap-28 p-16 px-24 mx-40 rounded-xl items-center" data-aos="fade-left" data-aos-duration="1000">
+                    
+                    <div class="">
+                        <img src="img/pplogo.png" class="py-2">
+                        <p class="text-xl font-medium subpixel-antialiased">Data Visualization</p>
+                        <div class="py-2 pl-6">
+                            <ul class="list-disc font-light text-slate-500 leading-6 text-sm">
+                                <li>
+                                    <p>Have a variety of already created content blocks for your data so you can visualize without having to create the visualization yourself</p>         
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="img/feature4.png" class="">
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="flex gap-28 p-16 px-24 mx-40 bg-white rounded-xl items-center" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="img/feature5.png" class="">
+                    <div class="">
+                        <img src="img/pplogo.png" class="py-2">
+                        <p class="text-xl font-medium subpixel-antialiased">Communication</p>
+                        <div class="py-2 pl-6">
+                            <ul class="list-disc font-light text-slate-500 leading-6 text-sm">
+                                <li>
+                                    <p>We automatically send email reminders to team members and project managers to submit reports</p>         
+                                </li>
+                                <li>
+                                    <p>You can see when reports are open</p>         
+                                </li>
+                                <li>
+                                    <p>You have a history of all your reports sent to stakeholders</p>         
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="flex gap-28 p-16 px-24 mx-40 rounded-xl items-center" data-aos="fade-left" data-aos-duration="1000">
+                    
+                    <div class="">
+                        <img src="img/pplogo.png" class="py-2">
+                        <p class="text-xl font-medium subpixel-antialiased">Data Entry / Repetitive work</p>
+                        <div class="py-2 pl-6">
+                            <ul class="list-disc font-light text-slate-500 leading-6 text-sm">
+                                <li>
+                                    <p>Connect with data sources so you dont't have to type it again.</p>         
+                                </li>
+                                <li>
+                                    <p>Automatically create updates / reports</p>         
+                                </li>
+                                <li>
+                                    <p>Using templates speeds up the process of data entry.</p>         
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <img src="img/feature6.png" class="">
+                </div>
+
+            </div>
+            
+        </div>
+
+       <!-- Section Feature End -->
+
+
+       <!-- Section 6 Start -->
+
+        <div class="bg-gradient-to-t from-blue-50 to-white">
+            <div class="section6 container mx-auto relative pt-28 pb-28 " id="pricingplans">
+                <div class="pricingplans">
+                    <div class="uppercase text-xs font-medium text-blue-500 text-center">
+                        <span>pricing plans</span>
+                    </div>
+                    <div class="text-center font-medium text-3xl mt-4">
+                        <span>Choose the Package</span>
+                    </div>
+                    <div class="text-center font-medium text-3xl mt-2">
+                        <span>That's Best for Your Team and Project</span>
+                    </div>
+                </div>
+                <div class="flex justify-center gap-6 mt-16">
+                    <div class="free text-sm w-1/6 shadow-md p-8 rounded-lg border border-gray-50 bg-white" data-aos="fade-right" data-aos-duration="1500">
+                        <div class="uppercase text-red-500 font-medium text-center">
+                            <span>free</span>
+                        </div>
+                        <div class="flex py-6 border-b border-gray-200 justify-center items-baseline">
+                            <div class="text-xl"><span>$</span></div>
+                            <div class="text-5xl font-semibold px-1"><span>0</span></div>
+                            <div class="font-medium"><span>/mo</span></div>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>Upto 5 Team Members</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center px-4">
+                            <span>Weekly & Monthly Reports</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>3 projects</span>
+                        </div>
+                        <div class="py-4 text-center">
+                            <span class="line-through text-slate-500">Premium Support</span>
+                        </div>
+                        <div class="text-center pt-8 pb-2">
+                            <span><a href="#" class="bg-blue-500 text-white py-2 px-3 rounded-md hover:bg-blue-600 duration-300 tracking-wide">Get started now</a></span>
+                        </div>
+                    </div>
+
+                    <div class="starter text-sm w-1/6 shadow-md p-8 rounded-lg border border-gray-50 bg-white" data-aos="fade-right" data-aos-duration="1500">
+                        <div class="uppercase text-red-500 font-medium text-center">
+                            <span>starter</span>
+                        </div>
+                        <div class="flex py-6 border-b border-gray-200 justify-center items-baseline">
+                            <div class="text-xl"><span>$</span></div>
+                            <div class="text-5xl font-semibold px-1"><span>25</span></div>
+                            <div class="font-medium"><span>/mo</span></div>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>Upto 10 Team Members</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center px-4">
+                            <span>Weekly & Monthly Reports</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>10 projects</span>
+                        </div>
+                        <div class="py-4 text-center">
+                            <span class="line-through text-slate-500">Premium Support</span>
+                        </div>
+                        <div class="text-center pt-8 pb-2">
+                            <span><a href="#" class="bg-blue-500 text-white py-2 px-3 rounded-md hover:bg-blue-600 duration-300 tracking-wide">Get started now</a></span>
+                        </div>
+                    </div>
+
+                    <div class="business text-sm w-1/6 shadow-md p-8 rounded-lg border border-gray-50 bg-white" data-aos="fade-right" data-aos-duration="1500">
+                        <div class="uppercase text-red-500 font-medium text-center">
+                            <span>business</span>
+                        </div>
+                        <div class="flex py-6 border-b border-gray-200 justify-center items-baseline">
+                            <div class="text-xl"><span>$</span></div>
+                            <div class="text-5xl font-semibold px-1"><span>99</span></div>
+                            <div class="font-medium"><span>/mo</span></div>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>Upto 50 Team Members</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center px-4">
+                            <span>Daily, Weekly, Monthly Reports</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>Unlimited projects</span>
+                        </div>
+                        <div class="py-4 text-center">
+                            <span class="">Premium Support</span>
+                        </div>
+                        <div class="text-center pt-8 pb-2">
+                            <span><a href="#" class="bg-blue-500 text-white py-2 px-3 rounded-md hover:bg-blue-600 duration-300 tracking-wide">Get started now</a></span>
+                        </div>
+                    </div>
+
+                    <div class="unlimited text-sm w-1/6 shadow-md p-8 rounded-lg border border-gray-50 bg-white" data-aos="fade-right" data-aos-duration="1500">
+                        <div class="uppercase text-red-500 text-center">
+                            <span>unlimited</span>
+                        </div>
+                        <div class="flex py-6 border-b border-gray-200 justify-center items-baseline">
+                            <div class="text-xl"><span>$</span></div>
+                            <div class="text-5xl font-semibold px-1"><span>3</span></div>
+                            <div class=""><span>/mo per user</span></div>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>Price Per Team Members</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center px-4">
+                            <span>Daily, Weekly, Monthly Reports</span>
+                        </div>
+                        <div class="py-4 border-b border-gray-200 text-center">
+                            <span>Unlimited projects</span>
+                        </div>
+                        <div class="py-4 text-center">
+                            <span class="">Premium Support</span>
+                        </div>
+                        <div class="text-center pt-8 pb-2">
+                            <span><a href="#" class="bg-blue-500 text-white py-2 px-3 rounded-md hover:bg-blue-600 duration-300 tracking-wide">Get started now</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Section 6 End -->
+
+       <!-- Section 7 Start -->
+
+       <div class="section7 container mx-auto relative pt-24 pb-20 bg-white" data-aos="zoom-out" data-aos-duration="1000">
+            <div class="text-center">
+                <div class="uppercase text-xs font-medium text-blue-500 text-center">
+                    <span>project pulse</span>
+                </div>
+                <div class="font-semibold text-3xl pt-6 pb-10">
+                    <span>Ready to optimize the way your team communicates?</span>
+                </div>
+                <div class="text-slate-500 text-xs leading-6">
+                    <span>Sign up now and get big discounts on premium features</span> <br>
+                    <span>when we launchbright the BETA.</span>
+                </div>
+            </div>
+            <div class="pt-10">
+                <div class="flex justify-center">
+                    <div class="bg-white w-1/3 rounded-md p-1 border border-gray-200">
+                        <div class="flex items-center">
+                            <div class="w-full pb-1">
+                                <input type="text" class="w-full text-sm px-2 focus:outline-none" placeholder="Enter your email">
+                            </div>
+                            <div class="bg-blue-500 px-10 py-3 text-white text-xs font-medium rounded-md cursor-pointer hover:bg-blue-600 duration-300">
+                                <span>Subscribe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section 7 End -->
+
+        
+
+        <!-- Section 8 Footer Start -->
+        <div class="section7 py-20 border-t border-gray-50 relative h-16">
+            <div class="relative">
+                <img src="img/Rectangle 8.png" class="absolute -top-20 right-12" style="width: 15%;">
+                <img src="img/Rectangle 9.png" class="absolute right-0 -top-20" style="width: 15%;">
+            </div>
+            <div class="container mx-auto relative">
+                <div class="flex justify-between px-36 items-center">
+                    <div class="">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#" class="transform transition duration-300 hover:scale-105">
+                            <img src="img/facebook.png">
+                        </a>
+                        <a href="#" class="transform transition duration-300 hover:scale-105">
+                            <img src="img/twitter.png">
+                        </a>
+                        <a href="#" class="transform transition duration-300 hover:scale-105">
+                            <img src="img/linkedin.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="px-36 pt-8">
+                    <div class="text-slate-500 text-sm">
+                        <span>Our mission is to create amazing communication between remote teams</span> <br>
+                        <span>and their project managers.</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+
+        <!-- Section 8 Footer End -->
+    </div>
+    
+
+    
+
+
+
+
+    <script type="text/javascript">
+        // Javascript for Navbar effect on scroll
+        window.onscroll = function() {myFunction()};
+            
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+            
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            } else {
+            header.classList.remove("sticky");
+            }
+        }
+
+        //Javascript for responsive Nav sidebar menu
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+
+        closeBtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
